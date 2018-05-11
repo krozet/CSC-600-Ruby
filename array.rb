@@ -43,6 +43,20 @@ class Array
     end
 end
 
+#test if incr or decr 
+def atest(value)
+  case value
+  when -1
+    puts "#{value} = decreasing"
+  when 0
+    puts "#{value} = not sorted"
+  when +1
+    puts "#{value} = increasing"
+  else
+    puts "Not an array"
+  end
+end
+
 #Examples
 nums = [15,3,9,3,6,2,0,1]
 puts "nums: #{nums}"
@@ -50,41 +64,17 @@ print "limited? to 1-15: "
 puts nums.limited?(1, 15)
 print "limited? to 0-15: "
 puts nums.limited?(0, 15)
+
 #not sorted
 print "sorted?: #{nums}: "
-value = nums.sorted?
-if value == +1
-  puts "#{value} = increasing"
-end
-if value == -1
-  puts "#{value} = decreasing"
-end
-if value == 0
-  puts "#{value} = not sorted"
-end
+atest(nums.sorted?)
+
 #decreasing
 nums = nums.sort
 print "sorted?: #{nums}: "
-value = nums.sorted?
-if value == +1
-  puts "#{value} = increasing"
-end
-if value == -1
-  puts "#{value} = decreasing"
-end
-if value == 0
-  puts "#{value} = not sorted"
-end
+atest(nums.sorted?)
+
 #increasing
 nums = nums.reverse
 print "sorted?: #{nums}: "
-value = nums.sorted?
-if value == +1
-  puts "#{value} = increasing"
-end
-if value == -1
-  puts "#{value} = decreasing"
-end
-if value == 0
-  puts "#{value} = not sorted"
-end
+atest(nums.sorted?)
