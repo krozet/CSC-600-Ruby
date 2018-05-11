@@ -26,7 +26,7 @@ class Array
               end
             end
           end
-          return +1
+          return -1
         else
           #increasing array
           if self.length > 2
@@ -37,13 +37,13 @@ class Array
               end
             end
           end
-          return -1
+          return +1
         end
       end
     end
 end
 
-#test if incr or decr 
+#test if incr or decr
 def atest(value)
   case value
   when -1
